@@ -1,7 +1,15 @@
 <template>
-  <video id="player" class="video" ref="video">
+  <video
+    id="player"
+    class="video"
+    ref="video"
+    controls
+    crossorigin
+    playsinline
+    data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
+  >
     <source
-      src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
       type="video/mp4"
     />
   </video>
@@ -12,11 +20,10 @@ import Plyr from "plyr";
 
 export default {
   name: "PlyrSample",
-  setup() {
-    const player = new Plyr("#player", {
+  mounted() {
+    new Plyr("#player", {
       debug: true,
       title: "View From A Blue Moon",
-      iconUrl: "dist/demo.svg",
       keyboard: {
         global: true,
       },
@@ -53,8 +60,8 @@ export default {
             label: "second marker",
           },
           {
-            time: 120,
-            label: "<strong>third</strong> marker",
+            time: 90,
+            label: "<div class='color'>third</div>",
           },
         ],
       },
@@ -62,3 +69,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.color {
+  background-color: red;
+}
+</style>
