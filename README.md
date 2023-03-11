@@ -33,6 +33,3 @@ npm run dev
 ```sh
 npm run build
 ```
-
-## Sandbox URL
-https://codesandbox.io/p/github/ryu-0729/plyr-sample-vue/main?workspaceId=0b4f44f0-8a1e-489a-9e81-f8f04335c48c&file=%2Fsrc%2Fcomponents%2FPlyrSample.vue
